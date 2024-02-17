@@ -4,20 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon Express</title>
+  
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+    <!-- Raleway -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <!-- Navbar starts -->
-   <nav>
-
+   <nav class="raleway my-4 flex justify-around items-center">
+         <h1 class=" font-bold text-xl ">M<span class="text-[#1DD100]">OO</span>N-EXPRESS</h1> 
+         <ul class="hidden lg:flex md:flex lg:list-none md:list-none  lg:gap-4 md:gap-3 text-green-500 font-medium text-sm">
+            <li>Home</li>
+            <li>About</li>
+            <li>Destination</li>
+            <li>Search</li>
+         </ul>
+         <button onclick="" class="btn text-[#1DD100] border-2 border-[#1DD100]">Bus <img src="./images/bus-icon.png" alt=""></button>
    </nav>
    <!-- Banner Starts -->
-   <div>
-
+ 
+   <div class=" flex justify-center items-center absolute">
+    <img src="./images/banner.png" alt="">
    </div>
+   <div class="relative lg:space-y-5  flex flex-col justify-center items-center my-10 lg:my-28">
+    <h1 class=" font-bold lg:text-3xl text-2xl text-white">End-to-End Travel with</h1>
+    <h1 class=" font-bold lg:text-3xl text-2xl text-[#1DD100]">MOON-EXPRESS</h1>
+    <p class="text-white lg:text-sm text-xs  font-semibold">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+    <button onclick="" class="btn text-black bg-[#1DD100]" >Buy Tickets</button>
+   </div>
+             
+
+   
 </header>
 <main> 
     <!-- Best Offer Section -->
@@ -58,7 +85,7 @@
                  </div>
                  <!-- App Nav -->
                  <div>
-                    
+
                  </div>
             </div>
             <!-- Footer Objects -->

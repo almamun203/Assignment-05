@@ -1,0 +1,17 @@
+ /* Raleway Font */
+/* <weight>: Use a value from 100 to 900 */
+
+.raleway{
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+}
+
+
+/* Inter Font */
+ /* <weight>: Use a value from 100 to 900 */
+ /* <slant>: Use a value from -10 to 0 */
+
+.inter{
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
