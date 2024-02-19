@@ -1,11 +1,22 @@
 const seats = document.querySelectorAll('.seat-key');
-
+let selectedCount = 0;
+let totalPrice = 0;
+let discountedPrice = 0;
+let grandTotal = 0;
+ 
 for(let i = 0;i<seats.length;i++){
     const seat = seats[i];
-    
+   
     seat.addEventListener('click', function(){
-       seat.style.backgroundColor = "green";
-       seat.style.color = "white";
+
+    if(selectedCount >= 4){
+        alert('You can book 4 tickets maximum.')
+    }
+    else{
+    selectedCount++;
+    seat.disabled=true;
+    seat.style.backgroundColor = "green";
+    seat.style.color = "white";
     const seatsLeft = document.getElementById('seats-left');
     seatsLeft.innerText = Number(seatsLeft.innerText) - 1;
     const seatsSelected = document.getElementById('seats-selected');
@@ -26,9 +37,12 @@ for(let i = 0;i<seats.length;i++){
     div.appendChild(span3);
     div.classList.add('flex');
     div.classList.add('justify-between');
+    
+    totalPrice+=550;
+    document.getElementById('total-price').innerText= totalPrice;
 
-    const couponValue = document.getElementById('coupon-value').value.toLowerCase() ;
-    const couponBtn = document.getElementById('apply-btn');
+    
+    }
     })
     
 }
@@ -37,8 +51,38 @@ for(let i = 0;i<seats.length;i++){
 
 
 
+function coupon(){
+    const inputValue= document.getElementById('coupon-value').value.split("").join("").toLowerCase();
+    if(inputValue==='new15'){
+        discountedPrice = totalPrice * 0.15 ;
+        const hideCouponDiv = document.getElementById('coupon-div');
+        hideCouponDiv.classList.add('hidden');
+    }
+    else if(inputValue === 'couple20'){
+       discountedPrice = totalPrice * 0.20;
+       const hideCouponDiv = document.getElementById('coupon-div');
+        hideCouponDiv.classList.add('hidden');
+    }
+    else{
+        alert('Invalid Coupon Code');
+        document.getElementById('coupon-value').value = "";
+    }
+ grandTotal = totalPrice - discountedPrice;
+ document.getElementById('grand-total').innerText= grandTotal;
 
-let grandTotal =document.getElementById('grand-total').innerText;
+}
+
+
+const nextBtn = document.getElementById('next-btn');
+nextBtn.addEventListener('click',function(){
+    if(document.getElementById('required').value === ''){
+        alert('Fill your Phone Number ');
+    }
+})
+
+
+
+
 
  
 

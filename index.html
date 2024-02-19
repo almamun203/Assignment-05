@@ -116,8 +116,8 @@
          <p>Departure Time</p><p>9.00 PM</p>
          </div>
          <div class="gap-4 flex py-2">
-         <p class="p-2 bg-gray-300 rounded-lg">Boarding Point-Laxmipur</p>
-         <p class="p-2 bg-gray-300 rounded-lg">Dropping Point-Bogura</p>
+         <p class="p-2 bg-gray-300 rounded-lg">Boarding Point-Dhaka</p>
+         <p class="p-2 bg-gray-300 rounded-lg">Dropping Point-Sylhet</p>
          <p class="p-2 bg-gray-300 rounded-lg">Est.Time-11 Hour</p>
          </div>
      </div>
@@ -206,11 +206,11 @@
                     </div>
                     <div class="text-sm font-bold flex justify-between">
                          <p>Total Price</p>
-                         <p>BDT <span id="total-price"></span></p>
+                         <p>BDT <span id="total-price">0</span></p>
                     </div> 
-                   <div class="flex my-2 gap-2">
+                   <div id="coupon-div" class="flex my-2 gap-2">
                     <input id="coupon-value" class="border-none bg-white rounded-xl p-2" type="text" placeholder="Have any coupon?">
-                    <button id="apply-btn" class="text-white bg-[#1DD100] rounded-lg font-bold text-sm p-2">Apply</button>
+                    <button onclick="coupon()"  class="text-white bg-[#1DD100] rounded-lg font-bold text-sm p-2">Apply</button>
                    </div> 
                    <div class="text-sm font-bold flex justify-between">
                     <p>Grand Total</p>
@@ -220,15 +220,21 @@
 
                 </div>
                     <!-- Form -->
+                    <form action="">
                    <div class="space-y-2 my-4">
                     <h3 class="text-lg font-bold ">Passenger Name*</h3>
-                    <input class="border-2 bg-white rounded-xl p-2 w-full" type="text" placeholder="Enter Your Name" required>
-                    <h3 class="text-lg font-bold ">Phone Number*</h3>
+                    <input class="border-2 bg-white rounded-xl p-2 w-full" type="text" placeholder="Enter Your Name" >
+                    <h3 id="required" class="text-lg font-bold ">Phone Number*</h3>
                     <input class="border-2 bg-white rounded-xl p-2 w-full" type="number" min="0" placeholder="Enter Your phone number" required>
                     <h3 class="text-lg font-bold ">Email ID*</h3>
                     <input class="border-2 bg-white rounded-xl p-2 w-full" type="email" placeholder="Enter Your email id ">
-                    <button onclick="my_modal_4.showModal()" type="submit" class="text-white bg-[#1DD100] rounded-lg font-bold text-sm p-2 w-full">Next</button>
+                   <input  class="btn text-white bg-[#1DD100] rounded-lg font-bold text-sm p-2 w-full" type="submit" value="NEXT" onclick="my_modal_4.showModal()">
+
+
+                    <!-- <button id="next-btn" onclick="my_modal_4.showModal()" type="submit" class="text-white bg-[#1DD100] rounded-lg font-bold text-sm p-2 w-full">Next</button> -->
                    </div>
+
+                </form>
                    <div class="text-xs flex gap-10 underline">
                     <a href="">Terms and Condition</a>
                     <a href="">Cancellation Policy</a>
